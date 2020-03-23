@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package u04e06;
 
-/**
- *
- * @author hernan
- */
+import java.util.Scanner;
 public class U04E06 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String args[]) {
+      Scanner entrada = new Scanner (System.in);
+      double lado1, lado2, hipotenusa, perimetro, superficie;
+      System.out.print("Ingrese un lado del triangulo: ");
+      lado1=entrada.nextDouble();
+      System.out.print("Ingrese otro lado del triangulo: ");
+      lado2=entrada.nextDouble();
+      hipotenusa = Math.sqrt((Math.pow(lado1,2))+(Math.pow(lado2,2)));
+      perimetro = (float)lado1+lado2+hipotenusa;
+      superficie = (float)(lado1*lado2/2);
+      System.out.println("El perimetro del triangulo es: "+perimetro);
+      System.out.println("La superficie del triangulo es: "+superficie);
     }
-    
 }
